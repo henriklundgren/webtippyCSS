@@ -1,0 +1,201 @@
+/* webtippy.css =========== *
+ * OOCSS oriented cascading stylesheet
+ * model.
+ *
+ * Usage ================== *
+ * Apply class to container eg body
+ * ex. webtippy georgia
+ *
+ * Available classes ====== *
+ * 1. georgia
+ * 2. verdana
+ * 3. times
+ * 4. arial
+ *
+ * Author ================= *
+ * twitter@heni
+ */
+
+ /* defaults ================= */
+ .webtippy blockquote > p,
+ .webtippy blockquote > cite { font-size: .9em; }
+
+.webtippy p {
+	color: #222;
+	text-rendering: optimizeSpeed;
+}
+
+.webtippy h1,
+.webtippy h2,
+.webtippy h3,
+.webtippy h4,
+.webtippy h5,
+.webtippy h6 {
+	color: #333;
+	text-rendering: optimizeLegibility;
+}
+
+.webtippy pre,
+.webtippy code,
+.webtippy kbd,
+.webtippy samp { font-family: Monaco, Nimbus Mono L, Courier New, FreeMono, monospace; }
+
+
+
+/* georgia .ttf stack ============== */
+
+.webtippy.georgia { font-family: Georgia, "Century Schoolbook", "New Century Schoolbook", "Century Schoolbook L", Serif; }
+.webtippy.georgia.tailor { font-family: "Century Schoolbook", "New Century Schoolbook", "Century Schoolbook L", Serif; }
+
+.webtippy.georgia h1,
+.webtippy.georgia h2,
+.webtippy.georgia h3,
+.webtippy.georgia h4,
+.webtippy.georgia h5,
+.webtippy.georgia h6 { font-family: Impact, Haettenschweiler, Helvetica Inserat, Sans-serif; }
+
+.webtippy.georgia blockquote { font-family: Verdana, "Bitstream Vera Sans", "DejaVu Sans", Tahoma, Geneva, Arial, Sans-serif; }
+
+
+
+/* verdana .ttf stack ============= */
+
+.webtippy.verdana { font-family: Verdana, "Bitstream Vera Sans", "DejaVu Sans", Tahoma, Geneva, FreeSans, Sans-serif; }
+.webtippy.verdana.tailor { font-family: "DejaVu Sans", "Bitstream Vera Sans", Tahoma, Geneva, FreeSans, Sans-serif; }
+
+.webtippy.verdana h1,
+.webtippy.verdana h2,
+.webtippy.verdana h3,
+.webtippy.verdana h4,
+.webtippy.verdana h5,
+.webtippy.verdana h6 {
+	font-family: Verdana, "Bitstream Vera Sans", "DejaVu Sans", Tahoma, Geneva, Arial, Sans-serif;
+	font-weight: bold;
+	letter-spacing: -1px;
+}
+.webtippy.verdana.tailor h1,
+.webtippy.verdana.tailor h2,
+.webtippy.verdana.tailor h3,
+.webtippy.verdana.tailor h4,
+.webtippy.verdana.tailor h5,
+.webtippy.verdana.tailor h6 { font-family: "Bitstream Vera Sans", "DejaVu Sans", Tahoma, Geneva, Arial, Sans-serif; }
+
+.webtippy.verdana blockquote { font-family: Georgia, "Century Schoolbook", "New Century Schoolbook", "Century Schoolbook L", Serif; }
+
+.webtippy.verdana.tailor pre,
+.webtippy.verdana.tailor code,
+.webtippy.verdana.tailor kbd,
+.webtippy.verdana.tailor samp { font-family: 'DejaVu Sans Mono', Monaco, Courier New, FreeMono, monospace; }
+
+
+
+/* times new roman .ttf stack ============ */
+
+.webtippy.times { font-family: "Times New Roman", "Nimbus Roman L", Times, Serif; }
+.webtippy.times.tailor { font-family: "Nimbus Roman No9 L", "Nimbus Roman L", Times, Serif; }
+
+.webtippy.times h1,
+.webtippy.times h2,
+.webtippy.times h3,
+.webtippy.times h4,
+.webtippy.times h5,
+.webtippy.times h6 {
+	font-family: Arial, Serif;
+	font-weight: bold;
+	letter-spacing: -1px;
+}
+
+.webtippy.times blockquote { font-family: Arial, Cambria, Georgia, Times, "Times New Roman";}
+
+
+
+/* arial .ttf stack ================== */
+
+.webtippy.arial { font-family: Arial, "Helvetica Neue", Helvetica, "Liberation Sans", "Nimbus Sans L", FreeSans, Sans-serif; }
+.webtippy.arial.tailor { font-family: "Helvetica Neue", Helvetica, "Liberation Sans", "Nimbus Sans L", FreeSans, Sans-serif; }
+
+.webtippy.arial h1,
+.webtippy.arial h2,
+.webtippy.arial h3,
+.webtippy.arial h4,
+.webtippy.arial h5,
+.webtippy.arial h6 {
+	font-family: Arial, "Helvetica Neue", Helvetica, "Liberation Sans", "Nimbus Sans L", FreeSans, Sans-serif;
+	font-weight: bold;
+	letter-spacing: -1px;
+}
+
+.webtippy.arial.tailor h1,
+.webtippy.arial.tailor h2,
+.webtippy.arial.tailor h3,
+.webtippy.arial.tailor h4,
+.webtippy.arial.tailor h5,
+.webtippy.arial.tailor h6 { font-family: "Helvetica Neue", Helvetica, "Nimbus Sans L", "Liberation Sans", FreeSans, Sans-serif; }
+
+.webtippy.arial blockquote { font-family: Cambria, Georgia, Times, "Times New Roman";}
+
+
+
+
+/* ubuntu .otf EXPERIMENTAL - need @font-face ========== */
+
+/* should be noted that this is not a websafe font - the concept this project leans on.
+ * Dont use this class unless you have the typefaces loaded already.
+ *
+ * Keept here mainly for experimenting purposes.
+ *
+ * http://clagnut.com/sandbox/css3/
+ * http://blog.fontdeck.com/post/15777165734/opentype-1
+ * http://www.microsoft.com/typography/otspec/featurelist.htm
+ * https://hacks.mozilla.org/2009/10/font-control-for-designers/
+ * http://www.smeltery.net/fonts/megalopolis-extra
+ *
+ */
+
+.webtippy.ubuntu { font-family: Ubuntu, FreeSans, Sans-serif; }
+
+.webtippy.ubuntu.tailor p {
+	-moz-font-feature-settings:"pnum" 1, "kern" 1, "liga" 1; 
+	-moz-font-feature-settings:"pnum=1, kern=1, liga=1"; /* old */
+	-ms-font-feature-settings:"pnum" 1, "kern" 1, "liga" 1; 
+	-o-font-feature-settings:"pnum" 1, "kern" 1, "liga" 1; 
+	-webkit-font-feature-settings:"pnum" 1, "kern" 1, "liga" 1; 
+	font-feature-settings:"pnum" 1, "kern" 1, "liga" 1;
+
+	font-family: Ubuntu Light;
+	font-size: 1.6rem;
+	line-height: 2.6rem;
+}
+
+.webtippy.ubuntu h1,
+.webtippy.ubuntu h2,
+.webtippy.ubuntu h3,
+.webtippy.ubuntu h4,
+.webtippy.ubuntu h5,
+.webtippy.ubuntu h6 {
+	font-family: "Megalopolis Extra", FreeSans, Sans-serif;
+}
+
+.webtippy.ubuntu.tailor h1,
+.webtippy.ubuntu.tailor h2,
+.webtippy.ubuntu.tailor h3,
+.webtippy.ubuntu.tailor h4,
+.webtippy.ubuntu.tailor h5,
+.webtippy.ubuntu.tailor h6 {
+	-moz-font-feature-settings:"smcp" 1, "onum" 1, "pnum" 1, "kern" 1, "liga" 1, "dlig" 1, "ss01" 1, "ss02" 1, "ss03" 1, "ss04" 1, "ss05" 1; 
+-moz-font-feature-settings:"smcp=1, onum=1, pnum=1, kern=1, liga=1, dlig=1, ss01=1, ss02=1, ss03=1, ss04=1, ss05=1"; 
+-ms-font-feature-settings:"smcp" 1, "onum" 1, "pnum" 1, "kern" 1, "liga" 1, "dlig" 1, "ss01" 1, "ss02" 1, "ss03" 1, "ss04" 1, "ss05" 1; 
+-o-font-feature-settings:"smcp" 1, "onum" 1, "pnum" 1, "kern" 1, "liga" 1, "dlig" 1, "ss01" 1, "ss02" 1, "ss03" 1, "ss04" 1, "ss05" 1; 
+-webkit-font-feature-settings:"smcp" 1, "onum" 1, "pnum" 1, "kern" 1, "liga" 1, "dlig" 1, "ss01" 1, "ss02" 1, "ss03" 1, "ss04" 1, "ss05" 1; 
+font-feature-settings:"smcp" 1, "onum" 1, "pnum" 1, "kern" 1, "liga" 1, "dlig" 1, "ss01" 1, "ss02" 1, "ss03" 1, "ss04" 1, "ss05" 1;
+
+	text-transform: uppercase;
+	text-shadow: 1px 1px 1px white;
+
+	-webkit-text-stroke: ;
+ }
+
+.webtippy.ubuntu blockquote,
+.webtippy.ubuntu blockquote p { font-family: Georgia; }
+.webtippy.ubuntu.tailor blockquote,
+.webtippy.ubuntu.tailor blockquote p { font-family: Georgia; }
