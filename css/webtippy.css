@@ -183,29 +183,42 @@
 .webtippy.arial h5,
 .webtippy.arial h6 {
 	font-family:
-		"Arial Black",
-		"Arial Bold",
-		"Liberation Sans Bold",
+		Arial,
+		"Liberation Sans",
+		"Nimbus Sans L",
+		"Helvetica Neue",
+		Helvetica,
+		FreeSans,
 		Sans-serif;
-	font-weight: normal;
+	font-weight: bold;
 	letter-spacing: -1px;
 }
-
 .webtippy.arial.tailor h1,
 .webtippy.arial.tailor h2,
 .webtippy.arial.tailor h3,
 .webtippy.arial.tailor h4,
 .webtippy.arial.tailor h5,
-.webtippy.arial.tailor h6 {
-	font-family: "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, FreeSans, Sans-serif; 
-	font-weight: bold;
-	letter-spacing: 0px;
+.webtippy.arial.tailor h6 { font-family:
+	"Liberation Sans",
+	"Nimbus Sans L",
+	"Helvetica Neue",
+	Helvetica,
+	FreeSans,
+	Arial,
+	Sans-serif; 
 }
-
-.webtippy.arial blockquote { font-family: Cambria, Georgia, Times, "Times New Roman";}
-
-.webtippy.times.tailor table td { font-family: "Liberation Mono", Monaco, "Courier New", FreeMono, monospace; }
-
+.webtippy.arial blockquote { font-family:
+	Cambria,
+	Georgia,
+	Times,
+	"Times New Roman";
+}
+.webtippy.times.tailor table td { font-family:
+	"Liberation Mono",
+	Monaco, "Courier New",
+	FreeMono,
+	monospace;
+}
 
 
 
