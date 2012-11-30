@@ -224,8 +224,22 @@
 
 /* trebuchet MS .ttf stack ================== */
 
-.webtippy.trebuchet { font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Ubuntu, Sans-serif; }
-.webtippy.trebuchet.tailor { font-family: "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, FreeSans, Sans-serif; }
+.webtippy.trebuchet { font-family:
+	"Trebuchet MS",
+	"Lucida Grande",
+	"Lucida Sans Unicode",
+	"Lucida Sans",
+	Ubuntu,
+	Sans-serif;
+}
+.webtippy.trebuchet.tailor { font-family:
+	Ubuntu,
+	"Lucida Grande",
+	"Lucida Sans Unicode",
+	"Lucida Sans",
+	"Trebuchet MS",
+	Sans-serif;
+}
 
 
 /*****************************************************/
