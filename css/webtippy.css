@@ -13,11 +13,20 @@
  *
  * Resources ============== *
  * http://cssfontstack.com/
+ * http://www.typetester.org/
  * 
  *
  * Author ================= *
  * twitter@heni
  */
+
+
+
+/*****************************************************/
+/* DONT MODIFY BELOW THIS LINE!!!                    */
+/*****************************************************/
+
+
 
 /* defaults ================= */
  .webtippy blockquote > p,
@@ -156,6 +165,17 @@
 .webtippy.arial blockquote { font-family: Cambria, Georgia, Times, "Times New Roman";}
 
 .webtippy.times.tailor table td { font-family: "Liberation Mono", Monaco, "Courier New", FreeMono, monospace; }
+
+
+
+
+
+/*****************************************************/
+/* MODIFY BELOW - :)                                 */
+/*****************************************************/
+
+
+
 
 
 /* CSS v3 @font-face ========= *
