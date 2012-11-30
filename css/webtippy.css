@@ -158,16 +158,36 @@
 
 /* arial .ttf stack ================== */
 
-.webtippy.arial { font-family: Arial, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, FreeSans, Sans-serif; }
-.webtippy.arial.tailor { font-family: "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, FreeSans, Arial, Sans-serif; }
-
+.webtippy.arial { font-family:
+	Arial,
+	"Liberation Sans",
+	"Nimbus Sans L",
+	"Helvetica Neue",
+	Helvetica,
+	FreeSans,
+	Sans-serif;
+}
+.webtippy.arial.tailor { font-family:
+	"Liberation Sans",
+	"Nimbus Sans L",
+	"Helvetica Neue",
+	Helvetica,
+	FreeSans,
+	Arial,
+	Sans-serif;
+}
 .webtippy.arial h1,
 .webtippy.arial h2,
 .webtippy.arial h3,
 .webtippy.arial h4,
 .webtippy.arial h5,
 .webtippy.arial h6 {
-	font-family: "Arial Black", "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, FreeSans, Sans-serif;
+	font-family:
+		"Arial Black",
+		"Arial Bold",
+		"Liberation Sans Bold",
+		"Gadget",
+		Sans-serif;
 	font-weight: normal;
 	letter-spacing: -1px;
 }
