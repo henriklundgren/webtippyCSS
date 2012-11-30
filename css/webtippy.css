@@ -1,25 +1,19 @@
 /* webtippy.css =========== *
- * OOCSS oriented cascading stylesheet
- * model.
+ * OOCSS oriented cascading
+ * stylesheet model.
  *
  * Usage ================== *
  * Apply class to container eg body
  * ex. webtippy georgia
  *
  * The philosphy is that you
- * not modify the classes below.
+ * do not modify the classes below.
  * All modification is done in your
  * main css file.
- * If you want to have google webfonts
- * on your headlines, then do the
- * modifications in your main, and
- * leave these here as fallback.
  *
- * Available classes ====== *
- * 1. georgia
- * 2. verdana
- * 3. times
- * 4. arial
+ * Resources ============== *
+ * http://cssfontstack.com/
+ * 
  *
  * Author ================= *
  * twitter@heni
