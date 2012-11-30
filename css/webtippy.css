@@ -25,9 +25,7 @@
  * twitter@heni
  */
 
-
-
- /* defaults ================= */
+/* defaults ================= */
  .webtippy blockquote > p,
  .webtippy blockquote > cite { font-size: .9em; } /* should be removed? */
 
@@ -164,6 +162,17 @@
 .webtippy.arial blockquote { font-family: Cambria, Georgia, Times, "Times New Roman";}
 
 .webtippy.times.tailor table td { font-family: "Liberation Mono", Monaco, "Courier New", FreeMono, monospace; }
+
+
+/* CSS v3 @font-face ========= *
+ * CSS allows you to declare
+ * custom fonts.
+ *
+ * Resources ================= *
+ * http://www.font2web.com
+ * 
+ * 
+ */
 
 
 

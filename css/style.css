@@ -121,7 +121,6 @@ h6 {
   letter-spacing: 1px;
   line-height: 23px; line-height: 2.3rem;
   margin: 0; /* reset */
-  text-rendering: optimizeLegibility;
 }
 h1 {
   font-size: 42px; font-size: 4.2rem;
