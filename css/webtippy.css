@@ -1,14 +1,12 @@
 @charset "UTF-8";
 
 /* webtippy.css =========== *
- * OOCSS oriented cascading
- * stylesheet model.
  *
  * Usage ================== *
  * Apply class to container eg body
- * ex. webtippy georgia
+ * ex. 'webtippy georgia'
  *
- * The philosphy is that you
+ * The philosophy is that you
  * do not modify the classes below.
  * All modification is done in your
  * main css file.
@@ -37,12 +35,6 @@
  * 
  */
 
-/* PUT CODE HERE --> 
-
-
-
-
-
 /*****************************************************/
 /* DONT MODIFY BELOW THIS LINE!!!                    */
 /*****************************************************/
@@ -54,6 +46,8 @@
  .webtippy blockquote > cite { font-size: .9em; } /* should be removed? */
 
 .webtippy p { text-rendering: optimizeSpeed; }
+.webtippy q,
+.webtippy blockquote > * { text-rendering: optimizeLegibility; }
 
 .webtippy h1,
 .webtippy h2,
@@ -65,49 +59,143 @@
 .webtippy pre,
 .webtippy code,
 .webtippy kbd,
-.webtippy samp { font-family: Monaco, "Nimbus Mono L", "Courier New", FreeMono, Monospace; }
+.webtippy samp {
+	font-family: Monaco,
+	"Nimbus Mono L",
+	"Courier New",
+	FreeMono,
+	Monospace;
+}
 
 
 
-/* georgia .ttf stack ============== */
 
-.webtippy.georgia { font-family: Georgia, "Century Schoolbook L", "New Century Schoolbook", "Century Schoolbook", Serif; }
-.webtippy.georgia.tailor { font-family: "Century Schoolbook L", "New Century Schoolbook", "Century Schoolbook", Serif; } /* in order; Linux, Mac, and Win */
 
+
+/* GEORGIA .ttf stack *************************************************/
+
+.webtippy.georgia {
+	font-family:
+		Georgia,
+		"Century Schoolbook L", /* Linux */
+		"New Century Schoolbook", /* OSX */
+		"Century Schoolbook", /* Win */
+		Serif;
+}
+/*
+ * Vanilla Windows is not equipped with Century Schoolbook,
+ * but Microsoft Office have them included. 
+ * TrueType Font Pack from Microsoft are available that also provides them.
+ */
+.webtippy.georgia.tailor { /* in order; Linux, OSX, and Win */
+	font-family:
+		"Century Schoolbook L",
+		"New Century Schoolbook",
+		"Century Schoolbook",
+		Georgia, /* Fallback before fallback */
+		Serif; 
+}
 .webtippy.georgia h1,
 .webtippy.georgia h2,
 .webtippy.georgia h3,
 .webtippy.georgia h4,
-.webtippy.georgia h5, /* Linux & Mac have no substitute for Impact */
-.webtippy.georgia h6 { font-family: Impact, Haettenschweiler, "Helvetica Inserat", Sans-serif; }
-
+.webtippy.georgia h5,
+.webtippy.georgia h6 { /* Linux & OSX have no substitute for Impact */
+	font-family: 
+		Impact,
+		Haettenschweiler,
+		"Helvetica Inserat",
+		Sans-serif;
+	font-weight: normal; /* important for Impact */
+}
 .webtippy.georgia blockquote,
 .webtippy.georgia blockquote p,
-.webtippy.georgia blockquote cite { font-family: Verdana, "DejaVu Sans", "Bitstream Vera Sans", Tahoma, Geneva, FreeSans, Sans-serif; }
-
+.webtippy.georgia blockquote cite,
+.webtippy.georgia details,
+.webtippy.georgia figure {
+	font-family:
+		Verdana,
+		"DejaVu Sans",
+		"Bitstream Vera Sans",
+		Tahoma,
+		Geneva,
+		FreeSans,
+		Sans-serif;
+	letter-spacing: -1px; /* Verdana has wide spacing, don't know how this effects other */
+}
 .webtippy.georgia.tailor blockquote,
 .webtippy.georgia.tailor blockquote p,
-.webtippy.georgia.tailor blockquote cite { font-family: "DejaVu Sans", "Bitstream Vera Sans", Tahoma, Geneva, FreeSans, Sans-serif; }
+.webtippy.georgia.tailor blockquote cite {
+	font-family:
+		"DejaVu Sans",
+		"Bitstream Vera Sans",
+		Tahoma,
+		Geneva,
+		FreeSans,
+		Sans-serif;
+	letter-spacing: 0;
+}
+.webtippy.georgia table {
+	font-family:
+		Verdana,
+		"DejaVu Sans",
+		"Bitstream Vera Sans",
+		Tahoma,
+		Geneva,
+		FreeSans,
+		Sans-serif;
+}
+.webtippy.georgia.tailor table {
+	font-family:
+		"DejaVu Sans",
+		"Bitstream Vera Sans",
+		Tahoma,
+		Geneva,
+		FreeSans,
+		Sans-serif;
+}
+.webtippy.georgia.tailor table td { font-family: "DejaVu Sans Mono"; }
 
-.webtippy.georgia table { font-family: Verdana, "DejaVu Sans", "Bitstream Vera Sans", Tahoma, Geneva, FreeSans, Sans-serif; }
-
-.webtippy.georgia.tailor table { font-family: "DejaVu Sans", "Bitstream Vera Sans", Tahoma, Geneva, FreeSans, Sans-serif; }
-.webtippy.georgia.tailor table td { font-family: "DejaVu Sans Mono";}
 
 
 
-/* verdana .ttf stack ============= */
 
-.webtippy.verdana { font-family: Verdana, "DejaVu Sans", "Bitstream Vera Sans", Tahoma, Geneva, FreeSans, Sans-serif; }
-.webtippy.verdana.tailor { font-family: "DejaVu Sans", "Bitstream Vera Sans", Tahoma, Geneva, FreeSans, Sans-serif; }
 
+/* VERDANA .ttf stack *****************************************/
+
+.webtippy.verdana {
+	font-family:
+		Verdana,
+		"DejaVu Sans", /* Linux */
+		"Bitstream Vera Sans", /* Linux */
+		Geneva, /* OSX */
+		Tahoma, /* Win */
+		FreeSans,
+		Sans-serif;
+}
+.webtippy.verdana.tailor {
+	font-family:
+		"DejaVu Sans",
+		"Bitstream Vera Sans",
+		Geneva,
+		Tahoma,
+		FreeSans,
+		Sans-serif;
+}
 .webtippy.verdana h1,
 .webtippy.verdana h2,
 .webtippy.verdana h3,
 .webtippy.verdana h4,
 .webtippy.verdana h5,
 .webtippy.verdana h6 {
-	font-family: Verdana, "DejaVu Sans", "Bitstream Vera Sans", Tahoma, Geneva, FreeSans, Sans-serif;
+	font-family:
+		Verdana,
+		"DejaVu Sans",
+		"Bitstream Vera Sans",
+		Geneva,
+		Tahoma,
+		FreeSans,
+		Sans-serif;
 	font-weight: bold;
 	letter-spacing: -1px;
 }
@@ -116,65 +204,170 @@
 .webtippy.verdana.tailor h3,
 .webtippy.verdana.tailor h4,
 .webtippy.verdana.tailor h5,
-.webtippy.verdana.tailor h6 { font-family: "DejaVu Sans", "Bitstream Vera Sans", Tahoma, Geneva, FreeSans, Sans-serif; }
-
-.webtippy.verdana blockquote { font-family: Georgia, "Century Schoolbook L", "New Century Schoolbook", "Century Schoolbook", Serif; }
-
+.webtippy.verdana.tailor h6 {
+	font-family:
+		"DejaVu Sans",
+		"Bitstream Vera Sans",
+		Geneva,
+		Tahoma,
+		FreeSans,
+		Sans-serif;
+}
+.webtippy.verdana blockquote {
+	font-family:
+		Georgia,
+		"Century Schoolbook L",
+		"New Century Schoolbook",
+		"Century Schoolbook",
+		Serif;
+}
 .webtippy.verdana.tailor pre,
 .webtippy.verdana.tailor code,
 .webtippy.verdana.tailor kbd,
-.webtippy.verdana.tailor samp { font-family: "DejaVu Sans Mono", Monaco, "Courier New", FreeMono, monospace; }
+.webtippy.verdana.tailor samp {
+	font-family:
+		"DejaVu Sans Mono",
+		Monaco,
+		"Courier New",
+		FreeMono,
+		monospace;
+}
+.webtippy.verdana table {
+	font-family:
+		Verdana,
+		"DejaVu Sans",
+		"Bitstream Vera Sans",
+		Geneva,
+		Tahoma,
+		FreeSans,
+		Sans-serif;
+}
+.webtippy.verdana.tailor table {
+	font-family:
+		"DejaVu Sans",
+		"Bitstream Vera Sans",
+		Geneva,
+		Tahoma,
+		FreeSans,
+		Sans-serif;
+}
+.webtippy.verdana.tailor table td {
+	font-family:
+		"DejaVu Sans Mono",
+		Monaco,
+		"Courier New",
+		FreeMono,
+		monospace;
+}
 
-.webtippy.verdana table { font-family: Verdana, "DejaVu Sans", "Bitstream Vera Sans", Tahoma, Geneva, FreeSans, Sans-serif; }
-
-.webtippy.verdana.tailor table { font-family: "DejaVu Sans", "Bitstream Vera Sans", Tahoma, Geneva, FreeSans, Sans-serif; }
-.webtippy.verdana.tailor table td { font-family: "DejaVu Sans Mono", Monaco, "Courier New", FreeMono, monospace; }
 
 
 
-/* times new roman .ttf stack ============ */
 
-.webtippy.times { font-family: "Times New Roman", "Nimbus Roman L", Times, Serif; }
-.webtippy.times.tailor { font-family: "Nimbus Roman No9 L", "Nimbus Roman L", Times, Serif; }
 
+
+
+/* TIMES NEW ROMAN .ttf stack ************************************/
+
+.webtippy.times {
+	font-family:
+		"Times New Roman",
+		"Nimbus Roman L", /* Linux */
+		Times, /* OSX */
+		Serif;
+}
+.webtippy.times.tailor {
+	font-family:
+		"Nimbus Roman No9 L",
+		"Nimbus Roman L",
+		Times,
+		"Times New Roman",
+		Serif;
+}
 .webtippy.times h1,
 .webtippy.times h2,
 .webtippy.times h3,
 .webtippy.times h4,
 .webtippy.times h5,
 .webtippy.times h6 {
-	font-family: Arial, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, FreeSans, Sans-serif;
+	font-family:
+		Arial,
+		"Liberation Sans",
+		"Nimbus Sans L",
+		"Helvetica Neue",
+		Helvetica,
+		FreeSans,
+		Sans-serif;
 	font-weight: bold;
 	letter-spacing: -1px;
 }
-
-.webtippy.times blockquote { font-family: Arial, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, FreeSans, Sans-serif; }
-
-.webtippy.times table { font-family: Arial, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, FreeSans, Sans-serif; }
-
-.webtippy.times.tailor table { font-family: "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, FreeSans, Sans-serif; }
-.webtippy.times.tailor table td { font-family: "Liberation Mono", Monaco, "Courier New", FreeMono, monospace; }
-
-
-/* arial .ttf stack ================== */
-
-.webtippy.arial { font-family:
-	Arial,
-	"Liberation Sans",
-	"Nimbus Sans L",
-	"Helvetica Neue",
-	Helvetica,
-	FreeSans,
-	Sans-serif;
+.webtippy.times blockquote {
+	font-family:
+		Arial,
+		"Liberation Sans",
+		"Nimbus Sans L",
+		"Helvetica Neue",
+		Helvetica,
+		FreeSans,
+		Sans-serif;
 }
-.webtippy.arial.tailor { font-family:
-	"Liberation Sans",
-	"Nimbus Sans L",
-	"Helvetica Neue",
-	Helvetica,
-	FreeSans,
-	Arial,
-	Sans-serif;
+.webtippy.times table {
+	font-family:
+		Arial,
+		"Liberation Sans",
+		"Nimbus Sans L",
+		"Helvetica Neue",
+		Helvetica,
+		FreeSans,
+		Sans-serif;
+}
+.webtippy.times.tailor table {
+	font-family:
+		"Liberation Sans",
+		"Nimbus Sans L",
+		"Helvetica Neue",
+		Helvetica,
+		FreeSans,
+		Sans-serif;
+}
+.webtippy.times.tailor table td {
+	font-family:
+		"Liberation Mono",
+		Monaco,
+		"Courier New",
+		FreeMono,
+		monospace;
+}
+
+
+
+
+
+
+
+
+
+/* ARIAL .ttf stack ******************************************/
+
+.webtippy.arial {
+	font-family:
+		Arial,
+		"Liberation Sans", /* Linux */
+		"Nimbus Sans L", /* Linux */
+		"Helvetica Neue", /* OSX */
+		Helvetica, /* OSX */
+		FreeSans,
+		Sans-serif;
+}
+.webtippy.arial.tailor {
+	font-family:
+		"Liberation Sans",
+		"Nimbus Sans L",
+		"Helvetica Neue",
+		Helvetica,
+		FreeSans,
+		Arial,
+		Sans-serif;
 }
 .webtippy.arial h1,
 .webtippy.arial h2,
@@ -198,54 +391,57 @@
 .webtippy.arial.tailor h3,
 .webtippy.arial.tailor h4,
 .webtippy.arial.tailor h5,
-.webtippy.arial.tailor h6 { font-family:
-	"Liberation Sans",
-	"Nimbus Sans L",
-	"Helvetica Neue",
-	Helvetica,
-	FreeSans,
-	Arial,
-	Sans-serif; 
+.webtippy.arial.tailor h6 {
+	font-family:
+		"Liberation Sans",
+		"Nimbus Sans L",
+		"Helvetica Neue",
+		Helvetica,
+		FreeSans,
+		Arial,
+		Sans-serif; 
 }
-.webtippy.arial blockquote { font-family:
-	Cambria,
-	Georgia,
-	Times,
-	"Times New Roman";
+.webtippy.arial blockquote {
+	font-family:
+		Cambria,
+		Georgia,
+		Times,
+		"Times New Roman";
 }
-.webtippy.times.tailor table td { font-family:
-	"Liberation Mono",
-	Monaco, "Courier New",
-	FreeMono,
-	monospace;
-}
-
-
-
-/* trebuchet MS .ttf stack ================== */
-
-.webtippy.trebuchet { font-family:
-	"Trebuchet MS",
-	"Lucida Grande",
-	"Lucida Sans Unicode",
-	"Lucida Sans",
-	Ubuntu,
-	Sans-serif;
-}
-.webtippy.trebuchet.tailor { font-family:
-	Ubuntu,
-	"Lucida Grande",
-	"Lucida Sans Unicode",
-	"Lucida Sans",
-	"Trebuchet MS",
-	Sans-serif;
+.webtippy.times.tailor table td {
+	font-family:
+		"Liberation Mono",
+		Monaco, "Courier New",
+		FreeMono,
+		monospace;
 }
 
 
-/*****************************************************/
-/* MODIFY BELOW - :)                                 */
-/*****************************************************/
 
+
+
+
+
+/* TREBUCHET MS .ttf stack ******************************************************/
+
+.webtippy.trebuchet {
+	font-family:
+		"Trebuchet MS",
+		"Lucida Grande", /* OSX */
+		"Lucida Sans Unicode", /* OSX */
+		"Lucida Sans", /* OSX */
+		Ubuntu, /* Linux */
+		Sans-serif;
+}
+.webtippy.trebuchet.tailor {
+	font-family:
+		Ubuntu,
+		"Lucida Grande",
+		"Lucida Sans Unicode",
+		"Lucida Sans",
+		"Trebuchet MS",
+		Sans-serif;
+}
 
 
 
@@ -253,9 +449,8 @@
 /* ubuntu .otf EXPERIMENTAL - need @font-face ========== */
 
 /* Should be noted that this is not a websafe font - the concept this project leans on.
- * Dont use this class unless you have the typefaces loaded already. Maybe not even then.
  *
- * Keept here mainly for experimenting purposes.
+ * Kept here mainly for experimenting purposes.
  *
  * http://clagnut.com/sandbox/css3/
  * http://blog.fontdeck.com/post/15777165734/opentype-1
