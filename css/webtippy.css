@@ -17,6 +17,13 @@
  * http://www.codestyle.org/css/font-family/sampler-UnixResults.shtml
  * http://www.sitepoint.com/article/eight-definitive-font-stacks/
  * http://unitinteractive.com/blog/2008/06/26/better-css-font-stacks/
+ * http://fontdeck.com/support/fontsizeadjust
+ * 
+ * Additional ============== *
+ * Some of the well known websafe
+ * fonts for Linux is Type1 fonts.
+ * They are banned on some Linux
+ * systems since they render poorly.
  *
  * Author ================= *
  * twitter@heni
@@ -42,12 +49,18 @@
 
 
 /* defaults ================= */
+.webtippy {
+	font-style: normal;
+	vertical-align: baseline;
+}
 .webtippy blockquote > p,
 .webtippy blockquote > cite { font-size: .9em; } /* should be removed? */
 
 .webtippy p { text-rendering: optimizeSpeed; }
 .webtippy q,
 .webtippy blockquote > * { text-rendering: optimizeLegibility; }
+
+.webtippy q { font-style: italic; }
 
 .webtippy h1,
 .webtippy h2,
@@ -86,10 +99,11 @@
 .webtippy.georgia {
 	font-family:
 		Georgia,
-		"Century Schoolbook L", /* Linux */
+		"Century Schoolbook L", /* Linux --Type1 */
 		"New Century Schoolbook", /* OSX */
 		"Century Schoolbook", /* Win */
-		Serif; /* Browser */
+		serif; /* Browser(OS) */
+	font-size-adjust: .48; /* Georgia */
 }
 /*
  * Century Schoolbook is not installed on Windows,
@@ -97,11 +111,12 @@
  */
 .webtippy.georgia.tailor {
 	font-family:
-		"Century Schoolbook L", /* Linux */
+		"Century Schoolbook L", /* Linux --Type1 */
 		"New Century Schoolbook", /* OSX */
 		"Century Schoolbook", /* Win */
-		Georgia, /* Fallback before fallback */
-		Serif; /* Browser */
+		Georgia,
+		serif;
+	font-size-adjust: .48; /* Century Schoolbook */
 }
 .webtippy.georgia h1,
 .webtippy.georgia h2,
@@ -115,6 +130,21 @@
 		"Helvetica Inserat",
 		Sans-serif;
 	font-weight: normal; /* important for Impact */
+	font-size-adjust: .45; /* Impact */
+}
+.webtippy.georgia.tailor h1,
+.webtippy.georgia.tailor h2,
+.webtippy.georgia.tailor h3,
+.webtippy.georgia.tailor h4,
+.webtippy.georgia.tailor h5,
+.webtippy.georgia.tailor h6 {
+	font-family: 
+		Impact,
+		Haettenschweiler,
+		"Helvetica Inserat",
+		Sans-serif;
+	font-weight: normal; /* important for Impact */
+	font-size-adjust: .45; /* Impact */
 }
 .webtippy.georgia blockquote,
 .webtippy.georgia blockquote p,
@@ -174,22 +204,22 @@
 .webtippy.verdana {
 	font-family:
 		Verdana,
-		"DejaVu Sans", /* Linux */
 		"Bitstream Vera Sans", /* Linux */
+		"DejaVu Sans", /* Linux */
 		Geneva, /* OSX */
 		Tahoma, /* Win */
 		FreeSans,
-		Sans-serif;
+		Sans-serif; /* Browser */
+	font-size-adjust: .545; /* Verdana */
 	letter-spacing: -1px;
 }
 .webtippy.verdana.tailor {
 	font-family:
-		"DejaVu Sans",
-		"Bitstream Vera Sans",
+		"Bitstream Vera Sans", /* Linux */
+		"DejaVu Sans", /* Linux */
 		Geneva,
-		Tahoma,
-		FreeSans,
-		Sans-serif;
+		Tahoma;
+	font-size-adjust: 0.545; /* DejaVu Sans */
 }
 .webtippy.verdana h1,
 .webtippy.verdana h2,
@@ -218,9 +248,7 @@
 		"DejaVu Sans",
 		"Bitstream Vera Sans",
 		Geneva,
-		Tahoma,
-		FreeSans,
-		Sans-serif;
+		Tahoma;
 }
 .webtippy.verdana blockquote {
 	font-family:
@@ -235,11 +263,11 @@
 .webtippy.verdana.tailor kbd,
 .webtippy.verdana.tailor samp {
 	font-family:
-		"DejaVu Sans Mono",
+		"DejaVu Sans Mono", /* Linux */
 		Monaco,
-		"Courier New",
+		/*"Courier New"*/,
 		FreeMono,
-		monospace;
+		monospace; /* Browser */
 }
 .webtippy.verdana table {
 	font-family:
@@ -281,17 +309,18 @@
 .webtippy.times {
 	font-family:
 		"Times New Roman",
-		"Nimbus Roman L", /* Linux */
+		"Nimbus Roman L", /* Linux --Type 1 */
 		Times, /* OSX */
-		Serif;
+		serif;
+	font-size-adjust: .449; /* Times New Roman */
 }
 .webtippy.times.tailor {
 	font-family:
-		"Nimbus Roman No9 L",
-		"Nimbus Roman L",
-		Times,
+		"Nimbus Roman No9 L", /* Linux --Type 1 */
+		"Nimbus Roman L", /* Linux --Type 1 */
+		Times, /* OSX */
 		"Times New Roman",
-		Serif;
+		serif;
 }
 .webtippy.times h1,
 .webtippy.times h2,
@@ -362,11 +391,12 @@
 	font-family:
 		Arial,
 		"Liberation Sans", /* Linux */
-		"Nimbus Sans L", /* Linux */
+		"Nimbus Sans L", /* Linux --Type 1 */
 		"Helvetica Neue", /* OSX */
 		Helvetica, /* OSX */
 		FreeSans,
-		Sans-serif;
+		sans-serif; /* Browser(OS) */
+	font-size-adjust: .52; /* Arial */
 }
 .webtippy.arial.tailor {
 	font-family:
@@ -374,9 +404,11 @@
 		"Nimbus Sans L",
 		"Helvetica Neue",
 		Helvetica,
-		FreeSans,
-		Arial,
-		Sans-serif;
+		FreeSans;
+		/* If none of the above is
+		 * found it will go back to
+		 * the prev stack */
+	font-size-adjust: 0.531; /* Liberation Sans */
 }
 .webtippy.arial h1,
 .webtippy.arial h2,
@@ -405,12 +437,11 @@
 		"Liberation Sans",
 		"Nimbus Sans L",
 		"Helvetica Neue",
-		Helvetica,
-		FreeSans,
-		Arial,
-		Sans-serif; 
+		Helvetica;
 }
-.webtippy.arial blockquote {
+/* Only use blockquotes for longer quotes eg. >4 lines */
+.webtippy.arial blockquote,
+.webtippy.arial blockquote > * { /* Blockquotes are a container element */
 	font-family:
 		Cambria,
 		Georgia,
@@ -440,7 +471,8 @@
 		"Lucida Sans Unicode", /* OSX */
 		"Lucida Sans", /* OSX */
 		Ubuntu, /* Linux */
-		Sans-serif;
+		sans-serif;
+	font-size-adjust: 0.525;
 }
 .webtippy.trebuchet.tailor {
 	font-family:
@@ -449,7 +481,7 @@
 		"Lucida Sans Unicode",
 		"Lucida Sans",
 		"Trebuchet MS",
-		Sans-serif;
+		sans-serif;
 }
 
 

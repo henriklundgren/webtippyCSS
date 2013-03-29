@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en"  class="webtippy base">
+<html lang="en">
 	
 <head>
   <meta charset="utf-8">
@@ -17,11 +17,28 @@
   div {
 	  width:40%; 
 	  float: left; 
-	  height: 260px; 
+	  height: auto; 
 	  border: thin solid red; 
 	  border-width: 0 thin thin 0; 
 	  padding: 10px;
 	  }
+	div.x-height {
+		float:left;
+		font-size-adjust:0.45;
+		margin-right:20px;
+		width:200px;
+		}
+	.adjust {  font-size-adjust:; }
+	.bottom {
+			clear: both;
+			
+	}
+	.bottom p {
+		font-size: 150px;
+		}
+	.bottom span {
+		border: thin solid red;
+		}
   </style>
   
 </head>
@@ -53,7 +70,7 @@
 		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Si stante, hoc natura videlicet vult, salvam esse se, quod concedimus; Tollenda est atque extrahenda radicitus. Quae contraria sunt his, malane? Quos quidem tibi studiose et diligenter tractandos magnopere censeo. Mene ergo et Triarium dignos existimas, apud quos turpiter loquare? </p>
 	</div>
 
-		<div class="webtippy times">
+	<div class="webtippy times">
 		<h2>Times New Roman</h2>
 		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Si stante, hoc natura videlicet vult, salvam esse se, quod concedimus; Tollenda est atque extrahenda radicitus. Quae contraria sunt his, malane? Quos quidem tibi studiose et diligenter tractandos magnopere censeo. Mene ergo et Triarium dignos existimas, apud quos turpiter loquare? </p>
 	</div>
@@ -69,6 +86,12 @@
 		<div class="webtippy trebuchet tailor">
 		<h2>Trebuchet tailor</h2>
 		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Si stante, hoc natura videlicet vult, salvam esse se, quod concedimus; Tollenda est atque extrahenda radicitus. Quae contraria sunt his, malane? Quos quidem tibi studiose et diligenter tractandos magnopere censeo. Mene ergo et Triarium dignos existimas, apud quos turpiter loquare? </p>
-	</div>		
+	</div>
+	
+<div class="bottom webtippy trebuchet">	
+	<p><span>a</span><span class="adjust">a</span></p>
+</div>
 </body>
+
+
 </html>
