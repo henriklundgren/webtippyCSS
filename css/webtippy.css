@@ -42,8 +42,8 @@
 
 
 /* defaults ================= */
- .webtippy blockquote > p,
- .webtippy blockquote > cite { font-size: .9em; } /* should be removed? */
+.webtippy blockquote > p,
+.webtippy blockquote > cite { font-size: .9em; } /* should be removed? */
 
 .webtippy p { text-rendering: optimizeSpeed; }
 .webtippy q,
@@ -60,15 +60,24 @@
 .webtippy code,
 .webtippy kbd,
 .webtippy samp {
-	font-family: Monaco,
-	"Nimbus Mono L",
-	"Courier New",
-	FreeMono,
-	Monospace;
+	font-family:
+		Monaco,
+		"Nimbus Mono L",
+		"Courier New",
+		FreeMono,
+		Monospace; /* Browser */
 }
 
 
+/* extras ************************************/
 
+.webtippy.base html {
+	font-size: 62.5%; /* http://www.snook.ca/archives/html_and_css/font-size-with-rem */
+}
+.webtippy.base body {
+	font-size: 14px; font-size: 1.2rem;
+	line-height: 1.4;
+}
 
 
 
@@ -80,20 +89,19 @@
 		"Century Schoolbook L", /* Linux */
 		"New Century Schoolbook", /* OSX */
 		"Century Schoolbook", /* Win */
-		Serif;
+		Serif; /* Browser */
 }
 /*
- * Vanilla Windows is not equipped with Century Schoolbook,
- * but Microsoft Office have them included. 
- * TrueType Font Pack from Microsoft are available that also provides them.
+ * Century Schoolbook is not installed on Windows,
+ * though they are available in Microsoft Office.
  */
-.webtippy.georgia.tailor { /* in order; Linux, OSX, and Win */
+.webtippy.georgia.tailor {
 	font-family:
-		"Century Schoolbook L",
-		"New Century Schoolbook",
-		"Century Schoolbook",
+		"Century Schoolbook L", /* Linux */
+		"New Century Schoolbook", /* OSX */
+		"Century Schoolbook", /* Win */
 		Georgia, /* Fallback before fallback */
-		Serif; 
+		Serif; /* Browser */
 }
 .webtippy.georgia h1,
 .webtippy.georgia h2,
@@ -172,6 +180,7 @@
 		Tahoma, /* Win */
 		FreeSans,
 		Sans-serif;
+	letter-spacing: -1px;
 }
 .webtippy.verdana.tailor {
 	font-family:
