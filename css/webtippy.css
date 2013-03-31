@@ -1,4 +1,5 @@
 @charset "UTF-8";
+/* https://developer.mozilla.org/en-US/docs/CSS/@charset */
 
 /* webtippy.css =========== *
  *
@@ -18,6 +19,7 @@
  * http://www.sitepoint.com/article/eight-definitive-font-stacks/
  * http://unitinteractive.com/blog/2008/06/26/better-css-font-stacks/
  * http://fontdeck.com/support/fontsizeadjust
+ * https://support.apple.com/kb/HT5484
  * 
  * Additional ============== *
  * Some of the well known websafe
@@ -49,14 +51,10 @@
 
 
 /* defaults ================= */
-.webtippy {
-	font-style: normal;
-	vertical-align: baseline;
-}
-.webtippy blockquote > p,
-.webtippy blockquote > cite { font-size: .9em; } /* should be removed? */
+.webtippy { font-style: normal; }
 
 .webtippy p { text-rendering: optimizeSpeed; }
+
 .webtippy q,
 .webtippy blockquote > * { text-rendering: optimizeLegibility; }
 
@@ -74,23 +72,39 @@
 .webtippy kbd,
 .webtippy samp {
 	font-family:
-		Monaco,
-		"Nimbus Mono L",
-		"Courier New",
-		FreeMono,
-		Monospace; /* Browser */
+		Consolas, /* Win */
+		Monaco, /* OSX */
+		"Nimbus Mono L", /* Linux */
+		FreeMono, /* ? */
+		monospace; /* Browser */
 }
-
+/*
+ * font-family:
+ * 'Bitstream Vera  Sans Mono' / Linux 
+ * 'DejaVu Sans Mono' / Linux
+ * Menlo / OSX
+ * 
+ * font-family:
+ * 		"Courier New", /* Win 
+ 		"Lucida Console", /* OSX 
+ */
 
 /* extras ************************************/
 
-.webtippy.base html {
-	font-size: 62.5%; /* http://www.snook.ca/archives/html_and_css/font-size-with-rem */
+@supports ( font-size: 1.2rem ) { /* Only support Mozilla >20 */
+
+	.webtippy.base html {
+		font-size: 62.5%; /* http://www.snook.ca/archives/html_and_css/font-size-with-rem */
+	}
+	.webtippy.base body {
+		font-size: 14px; font-size: 1.2rem;
+		line-height: 1.4;
+	}
+
 }
-.webtippy.base body {
-	font-size: 14px; font-size: 1.2rem;
-	line-height: 1.4;
-}
+
+
+
 
 
 
@@ -125,9 +139,9 @@
 .webtippy.georgia h5,
 .webtippy.georgia h6 { /* Linux & OSX have no substitute for Impact */
 	font-family: 
-		Impact,
+		/*Impact, /* Win */
 		Haettenschweiler,
-		"Helvetica Inserat",
+		"Helvetica Inserat", /* OSX */
 		Sans-serif;
 	font-weight: normal; /* important for Impact */
 	font-size-adjust: .45; /* Impact */
@@ -139,18 +153,16 @@
 .webtippy.georgia.tailor h5,
 .webtippy.georgia.tailor h6 {
 	font-family: 
-		Impact,
-		Haettenschweiler,
-		"Helvetica Inserat",
-		Sans-serif;
-	font-weight: normal; /* important for Impact */
-	font-size-adjust: .45; /* Impact */
+		"Bitstream Vera Sans", /* Linux */
+		"DejaVu Sans", /* Linux */
+		Geneva,
+		Tahoma,
+		FreeSans,
+		sans-serif;
+	font-weight: bold;
+	font-size-adjust: .545; /* DejaVu Sans */
 }
-.webtippy.georgia blockquote,
-.webtippy.georgia blockquote p,
-.webtippy.georgia blockquote cite,
-.webtippy.georgia details,
-.webtippy.georgia figure {
+.webtippy.georgia blockquote > * {
 	font-family:
 		Verdana,
 		"DejaVu Sans",
@@ -158,19 +170,17 @@
 		Tahoma,
 		Geneva,
 		FreeSans,
-		Sans-serif;
+		sans-serif;
 	letter-spacing: -1px; /* Verdana has wide spacing, don't know how this effects other */
 }
-.webtippy.georgia.tailor blockquote,
-.webtippy.georgia.tailor blockquote p,
-.webtippy.georgia.tailor blockquote cite {
+.webtippy.georgia.tailor blockquote > * {
 	font-family:
 		"DejaVu Sans",
 		"Bitstream Vera Sans",
 		Tahoma,
 		Geneva,
 		FreeSans,
-		Sans-serif;
+		sans-serif;
 	letter-spacing: 0;
 }
 .webtippy.georgia table {
@@ -209,7 +219,7 @@
 		Geneva, /* OSX */
 		Tahoma, /* Win */
 		FreeSans,
-		Sans-serif; /* Browser */
+		sans-serif; /* Browser */
 	font-size-adjust: .545; /* Verdana */
 	letter-spacing: -1px;
 }
@@ -218,7 +228,9 @@
 		"Bitstream Vera Sans", /* Linux */
 		"DejaVu Sans", /* Linux */
 		Geneva,
-		Tahoma;
+		Tahoma,
+		FreeSans,
+		sans-serif;
 	font-size-adjust: 0.545; /* DejaVu Sans */
 }
 .webtippy.verdana h1,
@@ -310,6 +322,8 @@
 	font-family:
 		"Times New Roman",
 		"Nimbus Roman L", /* Linux --Type 1 */
+		"Liberation Serif",
+		FreeSerif,
 		Times, /* OSX */
 		serif;
 	font-size-adjust: .449; /* Times New Roman */
@@ -318,9 +332,12 @@
 	font-family:
 		"Nimbus Roman No9 L", /* Linux --Type 1 */
 		"Nimbus Roman L", /* Linux --Type 1 */
+		"Liberation Serif",
+		FreeSerif,
 		Times, /* OSX */
 		"Times New Roman",
 		serif;
+	font-size-adjust: .47; /* Liberation Serif */
 }
 .webtippy.times h1,
 .webtippy.times h2,
@@ -376,6 +393,11 @@
 		FreeMono,
 		monospace;
 }
+
+
+
+
+
 
 
 
@@ -463,6 +485,7 @@
 
 
 /* TREBUCHET MS .ttf stack ******************************************************/
+/* 15px or lower */
 
 .webtippy.trebuchet {
 	font-family:

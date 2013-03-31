@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="webtippy base">
 	
 <head>
   <meta charset="utf-8">
@@ -14,20 +14,24 @@
   <link rel="stylesheet" href="css/webtippy.css"/>
   
   <style>
-  div {
-	  width:40%; 
-	  float: left; 
-	  height: auto; 
-	  border: thin solid red; 
-	  border-width: 0 thin thin 0; 
-	  padding: 10px;
-	  }
-	div.x-height {
-		float:left;
-		font-size-adjust:0.45;
-		margin-right:20px;
-		width:200px;
-		}
+.flex-container {
+	width: 80%;
+	display: -moz-box;
+	display: -webkit-box;
+	display: box;
+	-moz-box-orient: horizontal;
+	-webkit-box-orient: horizontal;
+	box-orient: horizontal;
+	outline: 1px solid #f00;
+	margin-bottom: 10px;
+}
+.flex-container .item {
+	-moz-box-flex: 1;
+	-webkit-box-flex: 1;
+	box-flex: 1;
+	padding: 10px;
+}
+
 	.adjust {  font-size-adjust:; }
 	.bottom {
 			clear: both;
@@ -43,52 +47,62 @@
   
 </head>
 <body>
-	<div class="webtippy georgia">
+<div class="flex-container">
+	<div class="webtippy georgia item">
 		<h2>Georgia</h2>
 		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Si stante, hoc natura videlicet vult, salvam esse se, quod concedimus; Tollenda est atque extrahenda radicitus. Quae contraria sunt his, malane? Quos quidem tibi studiose et diligenter tractandos magnopere censeo. Mene ergo et Triarium dignos existimas, apud quos turpiter loquare? </p>
 	</div>
-	<div class="webtippy georgia tailor">
+	<div class="webtippy georgia tailor item">
 		<h2>Georgia tailor</h2>
 		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Si stante, hoc natura videlicet vult, salvam esse se, quod concedimus; Tollenda est atque extrahenda radicitus. Quae contraria sunt his, malane? Quos quidem tibi studiose et diligenter tractandos magnopere censeo. Mene ergo et Triarium dignos existimas, apud quos turpiter loquare? </p>
 	</div>
-	
-		<div class="webtippy arial">
+</div>
+
+<div class="flex-container">	
+	<div class="webtippy arial item">
 		<h2>Arial</h2>
 		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Si stante, hoc natura videlicet vult, salvam esse se, quod concedimus; Tollenda est atque extrahenda radicitus. Quae contraria sunt his, malane? Quos quidem tibi studiose et diligenter tractandos magnopere censeo. Mene ergo et Triarium dignos existimas, apud quos turpiter loquare? </p>
 	</div>
-		<div class="webtippy arial tailor">
+	<div class="webtippy arial tailor item">
 		<h2>Arial tailor</h2>
 		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Si stante, hoc natura videlicet vult, salvam esse se, quod concedimus; Tollenda est atque extrahenda radicitus. Quae contraria sunt his, malane? Quos quidem tibi studiose et diligenter tractandos magnopere censeo. Mene ergo et Triarium dignos existimas, apud quos turpiter loquare? </p>
 	</div>
+</div>
 
-		<div class="webtippy verdana">
+<div class="flex-container">
+	<div class="webtippy verdana item">
 		<h2>Verdana</h2>
 		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Si stante, hoc natura videlicet vult, salvam esse se, quod concedimus; Tollenda est atque extrahenda radicitus. Quae contraria sunt his, malane? Quos quidem tibi studiose et diligenter tractandos magnopere censeo. Mene ergo et Triarium dignos existimas, apud quos turpiter loquare? </p>
 	</div>
-		<div class="webtippy verdana tailor">
+	<div class="webtippy verdana tailor item">
 		<h2>Verdana tailor</h2>
 		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Si stante, hoc natura videlicet vult, salvam esse se, quod concedimus; Tollenda est atque extrahenda radicitus. Quae contraria sunt his, malane? Quos quidem tibi studiose et diligenter tractandos magnopere censeo. Mene ergo et Triarium dignos existimas, apud quos turpiter loquare? </p>
 	</div>
+</div>
 
-	<div class="webtippy times">
+<div class="flex-container">
+	<div class="webtippy times item">
 		<h2>Times New Roman</h2>
 		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Si stante, hoc natura videlicet vult, salvam esse se, quod concedimus; Tollenda est atque extrahenda radicitus. Quae contraria sunt his, malane? Quos quidem tibi studiose et diligenter tractandos magnopere censeo. Mene ergo et Triarium dignos existimas, apud quos turpiter loquare? </p>
 	</div>
-		<div class="webtippy times tailor">
+	<div class="webtippy times tailor item">
 		<h2>Times New Roman tailor</h2>
 		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Si stante, hoc natura videlicet vult, salvam esse se, quod concedimus; Tollenda est atque extrahenda radicitus. Quae contraria sunt his, malane? Quos quidem tibi studiose et diligenter tractandos magnopere censeo. Mene ergo et Triarium dignos existimas, apud quos turpiter loquare? </p>
 	</div>
+</div>
 
-		<div class="webtippy trebuchet">
+<div class="flex-container">
+	<div class="webtippy trebuchet item">
 		<h2>Trebuchet</h2>
 		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Si stante, hoc natura videlicet vult, salvam esse se, quod concedimus; Tollenda est atque extrahenda radicitus. Quae contraria sunt his, malane? Quos quidem tibi studiose et diligenter tractandos magnopere censeo. Mene ergo et Triarium dignos existimas, apud quos turpiter loquare? </p>
 	</div>
-		<div class="webtippy trebuchet tailor">
+	<div class="webtippy trebuchet tailor item">
 		<h2>Trebuchet tailor</h2>
 		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Si stante, hoc natura videlicet vult, salvam esse se, quod concedimus; Tollenda est atque extrahenda radicitus. Quae contraria sunt his, malane? Quos quidem tibi studiose et diligenter tractandos magnopere censeo. Mene ergo et Triarium dignos existimas, apud quos turpiter loquare? </p>
 	</div>
-	
-<div class="bottom webtippy trebuchet">	
+</div>
+
+<div class="bottom webtippy verdana tailor">	
 	<p><span>a</span><span class="adjust">a</span></p>
 </div>
 </body>
